@@ -1,1 +1,6 @@
-# bemyselfjingjing.github.com
+#前端手册
+
+npm install 
+
+node server
+
