@@ -4,4 +4,4 @@
 -参考网站：http://cn.vuejs.org/guide/index.html
 
 ##1.Vue实例
--[](http://cn.vuejs.org/images/lifecycle.png)
+-[vue](http://cn.vuejs.org/images/lifecycle.png)
