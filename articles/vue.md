@@ -19,7 +19,7 @@
 - 当v-bind：style使用需要厂商前缀的CSS属性时，Vue.js会自动侦测并添加相应的前缀
 
 ##4.条件渲染 v-if v-show v-else
-<<<<<<< HEAD
+
 - v-if支持template语法，v-show不支持，v-else不可单独使用
 - v-if 有更高的切换消耗而 v-show 有更高的初始渲染消耗。
    因此，如果需要频繁切换 v-show 较好，如果在运行时条件不大可能改变 v-if 较好。
