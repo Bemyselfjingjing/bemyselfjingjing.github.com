@@ -4,7 +4,7 @@
 -参考网站：http://cn.vuejs.org/guide/index.html
 
 ##1.Vue实例
--[vue生命周期示意图](http://cn.vuejs.org/images/lifecycle.png)
+-[](http://cn.vuejs.org/images/lifecycle.png)
 
 ##2.双向数据绑定
 -单词处理插值：{{*msg}}
