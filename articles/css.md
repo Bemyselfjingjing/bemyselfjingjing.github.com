@@ -1,6 +1,6 @@
 # CSS3学习笔记
 
-标签（空格分隔）： --张静
+                                                    --张静
 
 ---
 
@@ -19,6 +19,7 @@
  -  border-image 创建图片边框
 
 ### 2、背景
+
  - 多重背景的设置
 ```
 body
@@ -26,18 +27,24 @@ body
 background-image:url(bg_flower.gif),url(bg_flower_2.gif);
 }
 ```
+
 ### 3、文本
+
  - text-overflow 规定文本溢出包含元素是发生的事儿
  - text-shadow 向文本添加阴影
  - word-wrap 允许对长的不可分割的单词进行分割并换行到下一行。
+
 ### 4、2D/3D转换
+
  - translate()：元素根据left和top的值从当前位置移动(2D/3D)
  - rotate()：元素顺时针旋转给定的角度。允许负值，元素将逆时针旋转。(2D/3D)
  - scale()：元素的尺寸会增加或减少，根据给定的宽度（X 轴）和高度（Y 轴）参数(2D/3D)
  - skew():元素翻转给定的角度，根据给定的水平线（X 轴）和垂直线（Y 轴）参数(2D/3D)
  - matrix()(2D/3D)
  - rotate3d(x,y,z,angle)
+
 ### 5、过渡：规定希望效果添加的css属性及时长
+
 ```
 body
 { 
@@ -63,7 +70,9 @@ transition-delay: 2s;//过渡效果何时开始 默认0
 -o-transition-delay:2s;
 }
 ```
+
 ### 6、动画 @keyframes规则
+
 ```
 body
 { 
@@ -105,9 +114,11 @@ animation-play-state: running;
  - animate.css  一些现成的css动画效果
 
 ### 7、多列布局
+
  - column-count
  - column-gap
  - column-rule
+
 ### 8、box-sizing
 
 ### canvas 画图    fabric框架 fabricjs.com 
@@ -146,11 +157,11 @@ canvas.setBackgroundImage('../assets/bkg.jpg');
 
 ```
  
+
 --- 
  
  - nth-child() 可以传参  odd even 或者数字等, 用来实现隔行换色
  - [name="n"]  属性选择器, 可以是任意属性, 非常方便
-
 
 
  
