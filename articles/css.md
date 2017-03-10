@@ -109,15 +109,49 @@ animation-play-state: running;
  - column-gap
  - column-rule
 ### 8、box-sizing
+
+### canvas 画图    fabric框架 fabricjs.com 
+
+```
+<!-- 初始化环境：引入需要的js脚本 -->
+<script type="text/javascript" src="third-party/fabric_static.js"></script>
+
+<!-- 创建一个画布  -->
+<canvas id="contentCanvas" width="130" height="300"></canvas>
+```
+```
+// 用fabric实例化画布  
+var fabricCanvas = new fabric.StaticCanvas('contentCanvas');
+
+// 设置画布大小 
+ fabricCanvas.setWidth(canvasWidth);//设置画布的宽
+ fabricCanvas.setHeight(canvasHeight);//设置画布的高
+ fabricCanvas.calcOffset();//设置偏移量
+ 
+//清除画布
+ fabricCanvas.clear();
+ 
+// 连接两点画线
+function drawLine(canvas, beginX,beginY, endX, endY, fillColor) {
+    var line = new fabric.Line([beginX,beginY,endX, endY], {
+        stroke: fillColor,//设置线颜色
+        strokeWidth: 4,//设置线的粗细
+        selectable: false //当设置为“false”时，不能选择对象进行修改（使用点按点或基于组的选择）。但事件仍在对象上。
+    })          
+    // 画线
+    canvas.add(line);
+}
+//将图片设置为背景   
+canvas.setBackgroundImage('../assets/bkg.jpg');
+
+```
+ 
 --- 
  
  - nth-child() 可以传参  odd even 或者数字等, 用来实现隔行换色
  - [name="n"]  属性选择器, 可以是任意属性, 非常方便
 
 
- 
-
- 
 
  
 
