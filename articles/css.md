@@ -155,6 +155,23 @@ function drawLine(canvas, beginX,beginY, endX, endY, fillColor) {
 //将图片设置为背景   
 canvas.setBackgroundImage('../assets/bkg.jpg');
 
+//用上面的方法实现，得在画布内点击一次后，才会将图片设置为背景，原因是，在渲染画布时，图片还咩有加载完成，所以通过以下方法，在图片加载时再设置背景
+function initBgImg(){
+	var img = new Image();
+	img.onload = function(){
+		notesCanvas.setBackgroundImage(img.src, notesCanvas.renderAll.bind(notesCanvas), {
+	        originX: 'left',
+	        originY: 'top',
+	        width: notesCanvas.width,
+  			height: notesCanvas.height,
+	        left: 0,
+	        top: 0
+	    });
+	};
+
+    img.src = '../assets/img/answer.jpg'
+}
+
 ```
  
 
