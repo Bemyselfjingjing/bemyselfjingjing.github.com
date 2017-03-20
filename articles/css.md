@@ -132,15 +132,15 @@ animation-play-state: running;
 ```
 ```
 // 用fabric实例化画布  
-var fabricCanvas = new fabric.StaticCanvas('contentCanvas');
+var notesCanvas = new fabric.StaticCanvas('contentCanvas');
 
 // 设置画布大小 
- fabricCanvas.setWidth(canvasWidth);//设置画布的宽
- fabricCanvas.setHeight(canvasHeight);//设置画布的高
- fabricCanvas.calcOffset();//设置偏移量
+ notesCanvas.setWidth(canvasWidth);//设置画布的宽
+ notesCanvas.setHeight(canvasHeight);//设置画布的高
+ notesCanvas.calcOffset();//设置偏移量
  
 //清除画布
- fabricCanvas.clear();
+ notesCanvas.clear();
  
 // 连接两点画线
 function drawLine(canvas, beginX,beginY, endX, endY, fillColor) {
@@ -153,7 +153,7 @@ function drawLine(canvas, beginX,beginY, endX, endY, fillColor) {
     canvas.add(line);
 }
 //将图片设置为背景   
-canvas.setBackgroundImage('../assets/bkg.jpg');
+notesCanvas.setBackgroundImage('../assets/bkg.jpg');
 
 //用上面的方法实现，得在画布内点击一次后，才会将图片设置为背景，原因是，在渲染画布时，图片还咩有加载完成，所以通过以下方法，在图片加载时再设置背景
 function initBgImg(){
@@ -172,6 +172,14 @@ function initBgImg(){
     img.src = '../assets/img/answer.jpg'
 }
 
+//对画布的监听（添加操作和选中）
+notesCanvas.on({
+	    'object:selected': function(e) {
+	     
+	    },
+	    'object:added': function(e) {
+	    }
+	  });
 ```
  
 
